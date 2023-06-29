@@ -1,0 +1,17 @@
+---
+import GalleryImage from "./GalleryImage.astro";
+---
+
+<section class="py-8 mx-8 md:mx-20">
+    <h2 class="text-3xl font-semibold mb-6 2xl:text-5xl">Gallery</h2>
+    <div class="flex flex-col md:flex-row justify-center">
+        <div class="flex flex-col justify-center md:mr-10">
+            <GalleryImage src="/img/gallery/01.jpg" alt="Photo 1" />
+            <GalleryImage src="/img/gallery/02.jpg" alt="Photo 2" />
+        </div>
+        <div class="flex flex-col justify-center">
+            <GalleryImage src="/img/gallery/03.jpg" alt="Photo 3" />
+            <GalleryImage src="/img/gallery/04.jpg" alt="Photo 4" />
+        </div>
+    </div>
+</section>

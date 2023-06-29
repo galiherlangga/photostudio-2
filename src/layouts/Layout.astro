@@ -10,11 +10,15 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Lora&family=Spline+Sans+Mono&display=swap");
+		</style>
+		<script src="https://kit.fontawesome.com/bceb2f1b08.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<slot />
@@ -23,14 +27,32 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			#da62c4 30%,
+			white 60%
+		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: "Spline Sans Mono", monospace;
+		background-color: #B1A7A6;
 	}
 	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Lora", serif;
+	}
+
+	p {
+		font-family: "Spline Sans Mono", monospace;
 	}
 </style>
